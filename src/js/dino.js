@@ -7,11 +7,14 @@ export class Dino {
     this.word_count = word_count;
   }
 
-  getDinoData() {
-    $.get(`http://dinoipsum.herokuapp.com/api/?format=json&paragraphs=${this.paragraph_count}&words=${this.word_count}`).then(function(response) {
-      $('#dino-data').text(response);
-    }).fail(function(error) {
-      $('#dino-data').text("Error");
+  getDinoData(displayData) {
+    $.get(`http://dinoipsum.herokuapp.com/api/?format=json&paragraphs=${this.paragraph_count}&words=${this.word_count}`)
+    .then(function(response) {
+      displayData(response)
+    })
+    .fail(function(error) {
+      console.log("Error");
+      // $('#dino-data').html("Error");
     });
   }
 

@@ -4,6 +4,10 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Dino } from './js/dino.js'
 
+const showData = function(response){
+  $('#dino-data').text(response);
+}
+
 $(document).ready(function() {
   $('#dino-form').submit(function(event) {
     event.preventDefault();
@@ -11,6 +15,7 @@ $(document).ready(function() {
     const words = parseInt($('#words').val());
 
     let dino = new Dino(paragraphs, words);
-    let response = dino.getDinoData();
+    dino.getDinoData(showData);
   });
+
 });
