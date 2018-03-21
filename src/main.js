@@ -4,8 +4,12 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Dino } from './js/dino.js'
 
-const showData = function(response){
-  $('#dino-data').text(response);
+const showData = function(response) {
+  console.log(response[0]);
+  response.forEach(function(paragraph) {
+    let splitString = paragraph.join(" ");
+      $('#dino-data').append(`<p> ${splitString} </p>`);
+  });
 }
 
 $(document).ready(function() {
