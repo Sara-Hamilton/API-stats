@@ -20,6 +20,12 @@ export class Dino {
   }
 
   countFirstLetters(array) {
-    return array[0];
+    const arrayMap = new Map();
+    for(var i = 0; i < array.length; i++) {
+      for (var j = 0; j < array[i].length; j++) {
+        console.log(array[i][j].charAt(0));
+      }
+    }
+
   }
 }

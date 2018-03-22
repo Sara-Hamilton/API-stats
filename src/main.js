@@ -27,6 +27,7 @@ $(document).ready(function() {
     let dino = new Dino(paragraphs, words);
 
     dino.getDinoData(showData);
+    dino.countFirstLetters(showData);
   });
 
 });
