@@ -15,7 +15,7 @@ export class Dino {
     })
     .fail(function(error) {
       console.log(error);
-      $('#error').html("There was an error handling your request. ");
+      displayData(error);
     });
   }
 
