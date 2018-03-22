@@ -7,15 +7,24 @@
   <body>
 
     <div class="container">
+      <div class="jumbotron">
+        <h3>Dino Stats</h3>
+        <p>Generate statistical charts based on Dino Ipsum text.</p>
+      </div>
       <form id="dino-form">
-        <label for="paragraphs">Number of paragraphs</label>
-        <input type="number" id="paragraphs">
-        <label for="words">Number of words per paragraph</label>
-        <input type="number" name="words" id="words">
+        <div class="form-group">
+          <label for="paragraphs">Number of paragraphs</label>
+          <input type="number" id="paragraphs" class="form-control" min="1" required="true">
+        </div>
+        <div class="form-group">
+          <label for="words">Number of words per paragraph</label>
+          <input type="number" name="words" id="words" class="form-control" min="1" required="true">
+        </div>
         <button type="submit" class="btn btn-info">Submit</button>
       </form>
 
       <div id="dino-data"></div>
+      <div id="error"></div>
 
     </div>
   </body>

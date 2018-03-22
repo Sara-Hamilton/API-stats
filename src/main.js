@@ -16,8 +16,9 @@ $(document).ready(function() {
     event.preventDefault();
     const paragraphs = parseInt($('#paragraphs').val());
     const words = parseInt($('#words').val());
+    $('#dino-form').hide();
     let dino = new Dino(paragraphs, words);
-    
+
     dino.getDinoData(showData);
   });
 
