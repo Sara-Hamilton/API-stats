@@ -25,10 +25,7 @@ $(document).ready(function() {
     const words = parseInt($('#words').val());
     $('#dino-form').hide();
     let dino = new Dino(paragraphs, words);
-
     dino.getDinoData(showData);
-    let map = {"N" : 1, "K" : 1, "S" : 2};
-    dino.getBarChart(map);
   });
 
 });

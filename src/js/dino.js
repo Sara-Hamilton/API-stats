@@ -31,37 +31,16 @@ export class Dino {
         }
       }
     }
-    // console.log("arrayMap",arrayMap);
-    // console.log("values",arrayMap.values());
-    // console.log("keys",arrayMap.keys());
-    // return arrayMap;
     this.getBarChart(arrayMap);
   }
 
   getBarChart(arrayMap) {
     let keys = Array.from(arrayMap.keys());
     let keysString = keys.join(",");
-    console.log("keysString", keysString);
-    // let values = arrayMap.values();
     let values = Array.from(arrayMap.values());
     let valuesString = values.join(",");
-    let url = `https://api.labstack.com/chart/bar?values=${valuesString}&labels=${keysString}&titles=First_Letter&colors=lightseagreen&title=Dino%20Stats&x_title=First_Letter`;
-    console.log(url);
-    $.get(`https://api.labstack.com/chart/bar?values=${valuesString}&labels=${keysString}&titles=First_Letter&colors=lightseagreen&title=Dino%20Stats&x_title=First_Letter`)
-    .then(function(results) {
-      console.log("success got results");
-      // function hexToBase64(str) {
-      //   return btoa(String.fromCharCode.apply(null, str.replace(/\r|\n/g, "").replace(/([\da-fA-F]{2}) ?/g, "0x$1 ").replace(/ +$/, "").split(" ")));
-      // }
-      // var img = document.createElement('img');
-      // let dinoChart = 'data:image/jpeg;base64,' + hexToBase64(results);
-      // img.src = 'data:image/jpeg;base64,' + btoa(results);
-      // document.body.appendChild(img);
-      // $('#chart').append(img);
-      $('#chart').html(`<img src=${url}>`);
-      // let img = img.src;
-      // console.log(img);
-    });
+    let url =    `https://api.labstack.com/chart/bar?values=${valuesString}&labels=${keysString}&titles=First_Letter&colors=lightseagreen&title=Dino%20Stats&x_title=First_Letter`;
+    $('#chart').html(`<img src=${url}>`);
   }
 
 }
