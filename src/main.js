@@ -27,7 +27,8 @@ $(document).ready(function() {
     let dino = new Dino(paragraphs, words);
 
     dino.getDinoData(showData);
-    dino.countFirstLetters(showData);
+    let map = {"N" : 1, "K" : 1, "S" : 2};
+    dino.getBarChart(map);
   });
 
 });
