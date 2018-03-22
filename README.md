@@ -13,7 +13,9 @@ This is the Epicodus weekly project for week 2 of the JavaScript course. It uses
 | :---------------| :---------------| :---------------|
 | Makes an API call. | http://dinoipsum.herokuapp.com/api/?format=json&paragraphs=2&words=3 | [["Platyceratops","Proplanicoxa","Inosaurus"],["Styracosaurus","Histriasaurus","Shidaisaurus"]] |
 | Count number of occurrences of words starting with each letter | [["Platyceratops","Proplanicoxa","Inosaurus"],["Styracosaurus","Histriasaurus","Shidaisaurus"]] | "P": 2, "I": 1, "H": 1, "S": 2 |
-| Make an API call to labstack | https://api.labstack.com/chart/bar?values=2,2,1,2&labels=P,I,H,S&titles=First_Letter&colors=lightseagreen&title=Dino%20Stats&x_title=First_Letter | a barchart showing the occurances of each first letter|
+| Make an API call to labstack | https://api.labstack.com/chart/bar?values=2,2,1,2&labels=P,I,H,S&colors=lightseagreen&title=Begins%20With&x_title=First%20Letter | a barchart showing the occurrences of each first letter|
+| Count number of occurrences of words ending with each set of two letters | [["Platyceratops","Proplanicoxa","Inosaurus"],["Styracosaurus","Histriasaurus","Shidaisaurus"]] | "ps": 1, "xa": 1, "us": 4|
+| Make an API call to labstack | https://api.labstack.com/chart/line?values=1,1,4&labels=ps,xa,us&title=Ends%20With&x_title=Last%20Two%20Letters | a linechart showing the occurrences of each first letter|
 
 
 ## Technologies Used
@@ -29,7 +31,7 @@ Installation
 ------------
 
 ```
-$ git clone https://github.com/...
+$ git clone https://github.com/Sara-Hamilton/API-stats
 ```
 
 _Requires node.js; instructions to install:_ https://www.learnhowtoprogram.com/javascript/getting-started-with-javascript-2f9a73dc-b7f5-4a22-9101-e69d49f552ac/installing-node-js
