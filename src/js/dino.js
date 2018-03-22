@@ -63,7 +63,6 @@ export class Dino {
   getLineChart(lineMap) {
     let lineKeys = Array.from(lineMap.keys());
     let lineKeysString = lineKeys.join(",");
-    console.log("keysString", lineKeysString);
     let lineValues = Array.from(lineMap.values());
     let lineValuesString = lineValues.join(",");
     let lineurl =

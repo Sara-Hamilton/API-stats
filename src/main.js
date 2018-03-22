@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Dino } from './js/dino.js'
 
 const showData = function(response) {
-  console.log("response",response);
   if(response.statusText === "error") {
     $('#error').html("There was an error handling your request.");
   } else if (response.length === 0) {
